@@ -16,7 +16,14 @@
 <body>
 <div id="maindiv">
 	<script>
-		for (let i=0;i<document.height * document.width; i++){ document.write("A"); }
+		document.write(document.height);
+		document.write("<br>");
+		document.write(document.width);
+		document.write("<br>");
+		var hw = document.height * document.width;
+		document.write(hw);
+		
+		//for (let i=0;i<document.height * document.width; i++){ document.write("A"); }
 	</script>
 </div>
 </body></html>
