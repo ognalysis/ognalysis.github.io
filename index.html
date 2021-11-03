@@ -14,19 +14,11 @@
 </style>
 </head>
 <body>
-<div id="maindiv">
-	<script>
-		var ele = getElementById('maindiv');
-		var h = ele.height;
-		var w = ele.width;
-		document.write(h);
-		document.write("<br>");
-		document.write(w);
-		document.write("<br>");
-		var hw = h * w;
-		document.write(hw);
-		
-		//for (let i=0;i<document.height * document.width; i++){ document.write("A"); }
-	</script>
+<div id="maindiv" name="maindiv">
+	
 </div>
+<script>	
+	for (var i=0; i<10000; i++){document.getElementById('maindiv').innerHTML += "A"; }	
+</script>
+
 </body></html>
