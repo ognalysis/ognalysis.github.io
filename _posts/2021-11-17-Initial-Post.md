@@ -8,4 +8,4 @@ categories: test blog
 
 <i>This text might be italicized</i>
 
-<div style="background: blue; size: 20px;"></div>
+<div style="background-color: blue; height: 20px; width: 20px;"></div>
