@@ -11,3 +11,6 @@ I am a security analyst and systems administrator who primarily focuses on user 
 My background is in analysis and threat detection/remediation.
 
 I have a bachelor's in Cyber Security from Oklahoma State University, and am currently studying for my Master's from the University of Boston.
+
+Here is a picture of my dog:
+
