@@ -8,6 +8,7 @@ permalink: /about/
 img {
 	max-width: 25%;
 	height: auto;
+	display: block;
 }
 </style>
 
