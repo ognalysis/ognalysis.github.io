@@ -4,7 +4,8 @@ title: About
 permalink: /about/
 ---
 
-![me](/docs/images/filephoto.jpg)
+<!-- ![me](/docs/images/filephoto.jpg) -->
+<img src="../docs/images/filephoto.jpg" style='size:50%;'>
 
 I am a security analyst and systems administrator who primarily focuses on user education and vulnerability assessment.
 
