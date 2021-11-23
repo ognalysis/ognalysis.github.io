@@ -1,14 +1,7 @@
 ---
 categories: blog linux
 ---
-<style>
-p {
-	display: block;
-}
-
-</style>
-
-<p>I recently decided to switch over to using Linux as my daily driver. However, several of our enterprise apps simply don't work on Linux, and I'd rather not faf about trying to use Wine. To that end, I decided VirtualBox would be the best option over VMware Workstation, mostly because it's free.
+I recently decided to switch over to using Linux as my daily driver. However, several of our enterprise apps simply don't work on Linux, and I'd rather not faf about trying to use Wine. To that end, I decided VirtualBox would be the best option over VMware Workstation, mostly because it's free.
 
 I go in and set the VM up, everything is fairly straightforward. As I come to start getting ready to install apps and login to sites for downloads, I find the copy/paste between guest and host doesn't work. Simple enough, I go through the menus and enable bidirectional, restart the VM, and... nothing.
 
@@ -39,5 +32,4 @@ Ultimately, I can now copy/paste between systems. I hope it was worth it.
 
 <a href src='https://askubuntu.com/a/681829'>Stack overflow solution</a>
 <a href src='https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/settings-storage.html'>Oracle Storage Document</a>
-</p>
 
