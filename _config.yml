@@ -25,14 +25,14 @@ github_username:  Ognalysis
 
 # Build settings
 markdown: kramdown
-#theme: minima
-#plugins:
-#  - jekyll-feed
-
-remote_theme: pages-themes/hacker@v0.2.0
+theme: minima
 plugins:
-   - jekyll-remote-theme
-   - jekyll-feed
+  - jekyll-feed
+
+#remote_theme: pages-themes/hacker@v0.2.0
+#plugins:
+#   - jekyll-remote-theme
+#   - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
