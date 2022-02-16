@@ -9,14 +9,14 @@ Some disclaimers:
 * I only attempted this on Windows 10, but this can allegedly work on any version of Windows.
 * This will only work for LOCAL WINDOWS USERS. This CANNOT be used to recover Windows Live logins.
 
-#Step 1 - Windows Install CD
+# Step 1 - Windows Install CD
 First step is to insert a Windows Installer CD or USB. If I'm feeling generous, I'll link to a resource to help make one.
 
 Once you've inserted the install media, reboot, and enter your boot menu (Usually ESC on HP, F12 on Dell)
 
 Boot to the CD/USB
 
-#Step 2 - Administrator Commandline
+# Step 2 - Administrator Commandline
 Once you've loaded into Windows, you can ignore the Install prompt and just hit SHIFT+F10, this should bring up an Administrator Command Prompt.
 
 The prompt should say something like "X:\Windows\". You will need to get to your main OS disk. If you don't know what your disk letter is, you probably shouldn't be attempting this tutorial, but what do I know?
@@ -30,7 +30,7 @@ Once you have identified the disk Windows is installed on, type the following in
 `C:`
 * replace "C" with whatever letter your disk is.
 
-#Step 3 - Edit files
+# Step 3 - Edit files
 Next we need to modify two files: `cmd.exe` and `Utilman.exe`.
 
 Type: `cd C:\Windows\System32\` and hit ENTER.
@@ -46,7 +46,7 @@ Once this is done, we can reboot the PC using: `wpeutil reboot` and hit ENTER.
 
 Boot into the main OS login screen and we're almost through.
 
-#Step 4 - Regain access
+# Step 4 - Regain access
 Once at the login screen, hit the icon that looks like this <image1> or this <image2> (usually at the bottom left or bottom right-hand corner).
 
 This should bring up an Administrator Command Prompt.
@@ -63,7 +63,7 @@ Type: `net user USERNAME "NEWPASSWORD"` and hit ENTER.
 
 Once that is done, you should be able to login to the account using that password.
 
-#Step 5 - Clean-up
+# Step 5 - Clean-up
 One last thing you need to do is clean up the file changes you made. You *may* have to boot back into the install disk to do this.
 
 At the command prompt, simply reverse what file changes you made earlier.
