@@ -59,7 +59,7 @@ Find the account which is locked out.
 Type: `net user USERNAME "NEWPASSWORD"` and hit ENTER.
 * ACCOUNTNAME needs to be the username you are modifying
 * NEWPASSWORD will be the new password. I suggest using double-quotes to help avoid syntax issues.
-* Example: `net user Administrator "IAmTheGreatestAdminEver12@"
+* Example: `net user Administrator "IAmTheGreatestAdminEver12@"`
 
 Once that is done, you should be able to login to the account using that password.
 
