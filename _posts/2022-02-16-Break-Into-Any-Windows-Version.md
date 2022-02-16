@@ -33,9 +33,10 @@ Once you have identified the disk Windows is installed on, type the following in
 # Step 3 - Edit files
 Next we need to modify two files: `cmd.exe` and `Utilman.exe`.
 
-Type: `cd C:\Windows\System32\` and hit ENTER.
-Type: `move Utilman.exe Utilman.exe.bak` and hit ENTER.
-Type: `move cmd.exe Utilman.exe` and hit ENTER.
+Type:
+* `cd C:\Windows\System32\` and hit ENTER.
+* `move Utilman.exe Utilman.exe.bak` and hit ENTER.
+* `move cmd.exe Utilman.exe` and hit ENTER.
 
 In order
 * We have navigated to the System32 folder
