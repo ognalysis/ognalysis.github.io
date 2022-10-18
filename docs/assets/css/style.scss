@@ -4,7 +4,6 @@
 @import "{{ site.theme }}";
 
 .page-content {
-  color: red;
-  background-image: url('docs/assets/images/org_photo_6553793_1665863092000.jpg');
+  background-image: url('/docs/assets/images/org_photo_6553793_1665863092000.jpg');
   background-size: cover;
 }
