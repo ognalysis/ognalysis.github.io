@@ -7,4 +7,4 @@ layout: home
 
 
 THISISTEST
-<head><link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.ico" | absolute_url }}"></head>
+<head><link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.ico?" | absolute_url }}"></head>
