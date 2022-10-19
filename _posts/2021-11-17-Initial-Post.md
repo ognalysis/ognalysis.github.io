@@ -14,11 +14,29 @@ categories: test blog
 <div style="background-color: red; height: 20px; width: 20px;"></div>
 <div style="background-color: blue; height: 20px; width: 20px;"></div>
 <div style="background-color: red; height: 20px; width: 20px;"></div>
-
-<script>
-	Document.Write("<p>");
-	for (var i=0; i<100; i++;){
-		Document.write("A");
-	}
-	Document.Write("</p>");
-</script>
+<div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div>
+<div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div>
+<div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div><div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div>
+<div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div>
+<div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div><div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div>
+<div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div>
+<div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div><div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div>
+<div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div>
+<div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div><div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div>
+<div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div>
+<div style="background-color: blue; height: 20px; width: 20px;"></div>
+<div style="background-color: red; height: 20px; width: 20px;"></div>
