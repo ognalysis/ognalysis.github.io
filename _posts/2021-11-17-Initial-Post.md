@@ -17,6 +17,6 @@ categories: test blog
 
 <script type='javascript/text'>
 	for (var i=0; i<100; i++;){
-		write("A");
+		Document.write("A");
 	}
 </script>
