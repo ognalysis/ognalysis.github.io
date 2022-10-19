@@ -5,6 +5,4 @@
 layout: home
 ---
 
-
-THISISTEST3
 <link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.ico?" | absolute_url }}">
