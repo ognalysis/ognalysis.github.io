@@ -16,7 +16,9 @@ categories: test blog
 <div style="background-color: red; height: 20px; width: 20px;"></div>
 
 <script type='javascript/text'>
+	Document.Write("<p>");
 	for (var i=0; i<100; i++;){
 		Document.write("A");
 	}
+	Document.Write("</p>");
 </script>
