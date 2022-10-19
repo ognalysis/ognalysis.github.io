@@ -6,5 +6,5 @@ layout: home
 ---
 
 
-THISISTEST
-<head><link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.ico?" | absolute_url }}"></head>
+THISISTEST2
+<link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.ico?" | absolute_url }}">
