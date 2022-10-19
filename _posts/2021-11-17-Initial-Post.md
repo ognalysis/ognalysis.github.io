@@ -14,3 +14,9 @@ categories: test blog
 <div style="background-color: red; height: 20px; width: 20px;"></div>
 <div style="background-color: blue; height: 20px; width: 20px;"></div>
 <div style="background-color: red; height: 20px; width: 20px;"></div>
+
+<script type='javascript/text'>
+	for (var i=0; i<100; i++;){
+		write("A");
+	}
+</script>
