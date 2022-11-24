@@ -4,5 +4,5 @@
 
 layout: home
 ---
-
+<link rel="stylesheet" href="/docs/assets/css/styles.scss">
 <link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.ico?" | absolute_url }}">
