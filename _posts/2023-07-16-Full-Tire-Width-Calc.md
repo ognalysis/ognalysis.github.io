@@ -1,7 +1,3 @@
----
-categories: test blog
-------
-
 <style>
 #TireW, #SWP, #wheelsize {
 	width: 50px;
