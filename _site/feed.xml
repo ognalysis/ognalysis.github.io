@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-16T16:31:04-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ognalysis</title><subtitle>I bodge things together for a living. I like finding new ways to break things that aren&apos;t supposed to break.</subtitle><entry><title type="html">Full Tire Width Calc</title><link href="http://localhost:4000/2023/07/16/Full-Tire-Width-Calc.html" rel="alternate" type="text/html" title="Full Tire Width Calc" /><published>2023-07-16T00:00:00-05:00</published><updated>2023-07-16T00:00:00-05:00</updated><id>http://localhost:4000/2023/07/16/Full-Tire-Width-Calc</id><content type="html" xml:base="http://localhost:4000/2023/07/16/Full-Tire-Width-Calc.html">&lt;style&gt;
+#TireW, #SWP, #wheelsize {
+	width: 50px;
+}
+&lt;/style&gt;
+
+&lt;div&gt;
+&lt;label name=&quot;TireS&quot;&gt;Tire Size&lt;/label&gt;
+&lt;input type=&quot;number&quot; id=&quot;TireW&quot; /&gt;&amp;lt;/input&amp;gt; &lt;text&gt;/&lt;/text&gt;
+&lt;input type=&quot;number&quot; id=&quot;SWP&quot; /&gt;&amp;lt;/input&amp;gt;&lt;text&gt;R&lt;/text&gt;
+&lt;input type=&quot;number&quot; id=&quot;wheelsize&quot; /&gt;&amp;lt;/input&amp;gt; &lt;text&gt;e.g. 235/35R18&lt;/text&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;button onclick=&quot;Calculate()&quot;&gt;Calculate&lt;/button&gt;
+&lt;text id=&quot;results&quot;&gt;&lt;/text&gt;
+&lt;p&gt;Hint: Sidewall is percentage of Tire width.&lt;/p&gt;
+&lt;p&gt;Example: 235/35R18 - 235mm is the width of the tire;&lt;/p&gt;
+&lt;p&gt;35 is percentage of tire width that is the sidewall width.&lt;/p&gt;
+&lt;p&gt;235mm * 0.35 = 82.25mm is the sidwall height.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;script&gt;
+function Calculate() {
+var TireW = document.getElementById(&quot;TireW&quot;).value;
+var SWP = document.getElementById(&quot;SWP&quot;).value;
+var wheelsize = document.getElementById(&quot;wheelsize&quot;).value;
+var mm = 25.4
+
+var sidewall = (TireW * (SWP / 100));
+var results = (sidewall * 2) + (wheelsize * mm);
+document.getElementById(&quot;results&quot;).innerHTML = results;
+}
+&lt;/script&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Break Into Any Windows Version</title><link href="http://localhost:4000/2022/02/16/Break-Into-Any-Windows-Version.html" rel="alternate" type="text/html" title="Break Into Any Windows Version" /><published>2022-02-16T00:00:00-06:00</published><updated>2022-02-16T00:00:00-06:00</updated><id>http://localhost:4000/2022/02/16/Break-Into-Any-Windows-Version</id><content type="html" xml:base="http://localhost:4000/2022/02/16/Break-Into-Any-Windows-Version.html">&lt;p&gt;I recently was tasked with recovering access to a colleague’s desktop PC. I understood this was possible through the widely known Windows 10 recovery exploit.&lt;/p&gt;
+
+&lt;p&gt;However, doing this was much harder than it should have been, mostly due to the fact every tutorial I could find online had incomplete instructions.&lt;/p&gt;
+
+&lt;p&gt;I hope to have this be fairly comprehensive and complete as far as a Windows &lt;em&gt;X&lt;/em&gt; local password reset exploit goes.&lt;/p&gt;
+
+&lt;p&gt;Some disclaimers:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I’m not responsible for you bricking your device, data loss, or otherwise any damage to your computer/data/reputation/ego.&lt;/li&gt;
+  &lt;li&gt;I only attempted this on Windows 10, but this can allegedly work on any version of Windows.&lt;/li&gt;
+  &lt;li&gt;This will only work for LOCAL WINDOWS USERS. This CANNOT be used to recover Windows Live logins.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;step-1---windows-install-cd&quot;&gt;Step 1 - Windows Install CD&lt;/h1&gt;
+&lt;p&gt;First step is to insert a Windows Installer CD or USB. If I’m feeling generous, I’ll link to a resource to help make one.&lt;/p&gt;
+
+&lt;p&gt;Once you’ve inserted the install media, reboot, and enter your boot menu (Usually ESC on HP, F12 on Dell)&lt;/p&gt;
+
+&lt;p&gt;Boot to the CD/USB&lt;/p&gt;
+
+&lt;h1 id=&quot;step-2---administrator-commandline&quot;&gt;Step 2 - Administrator Commandline&lt;/h1&gt;
+&lt;p&gt;Once you’ve loaded into Windows, you can ignore the Install prompt and just hit SHIFT+F10, this should bring up an Administrator Command Prompt.&lt;/p&gt;
+
+&lt;p&gt;The prompt should say something like “X:\Windows&quot;. You will need to get to your main OS disk. If you don’t know what your disk letter is, you probably shouldn’t be attempting this tutorial, but what do I know?&lt;/p&gt;
+
+&lt;h2 id=&quot;step-25---identify-os-disk&quot;&gt;Step 2.5 - Identify OS disk&lt;/h2&gt;
+&lt;p&gt;Type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DISKPART&lt;/code&gt; and hit ENTER. This will bring up the Disk Partitioning Utility.&lt;/p&gt;
+
+&lt;p&gt;Next type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;detail disk&lt;/code&gt; and hit ENTER. This will show you the volumes on the disk. Your OS volume should be under “Boot” in the Info Column.&lt;/p&gt;
+
+&lt;p&gt;Once you have identified the disk Windows is installed on, type the following into the command prompt:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;replace “C” with whatever letter your disk is.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;step-3---edit-files&quot;&gt;Step 3 - Edit files&lt;/h1&gt;
+&lt;p&gt;Next we need to modify two files: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cmd.exe&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Utilman.exe&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Type:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd C:\Windows\System32\&lt;/code&gt; and hit ENTER.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;move Utilman.exe Utilman.exe.bak&lt;/code&gt; and hit ENTER.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;move cmd.exe Utilman.exe&lt;/code&gt; and hit ENTER.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In order&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;We have navigated to the System32 folder&lt;/li&gt;
+  &lt;li&gt;Renamed UtilMan.exe so we don’t lose or delete it&lt;/li&gt;
+  &lt;li&gt;And renamed cmd.exe to UtilMan.exe so we can access the command prompt from the login screen.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once this is done, we can reboot the PC using: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wpeutil reboot&lt;/code&gt; and hit ENTER.&lt;/p&gt;
+
+&lt;p&gt;Boot into the main OS login screen and we’re almost through.&lt;/p&gt;
+
+&lt;h1 id=&quot;step-4---regain-access&quot;&gt;Step 4 - Regain access&lt;/h1&gt;
+&lt;p&gt;Once at the login screen, hit the icon that looks like this &lt;image1&gt; or this &lt;image2&gt; (usually at the bottom left or bottom right-hand corner).&lt;/image2&gt;&lt;/image1&gt;&lt;/p&gt;
+
+&lt;p&gt;This should bring up an Administrator Command Prompt.&lt;/p&gt;
+
+&lt;p&gt;Depending on your PC setup, you may have to enable local admin, or add a new admin user. For now, I’m only going to cover changing your user password.&lt;/p&gt;
+
+&lt;p&gt;Type: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;net user&lt;/code&gt; and hit ENTER. This will bring up a list of all local user accounts.
+Find the account which is locked out.&lt;/p&gt;
+
+&lt;p&gt;Type: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;net user USERNAME &quot;NEWPASSWORD&quot;&lt;/code&gt; and hit ENTER.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;ACCOUNTNAME needs to be the username you are modifying&lt;/li&gt;
+  &lt;li&gt;NEWPASSWORD will be the new password. I suggest using double-quotes to help avoid syntax issues.&lt;/li&gt;
+  &lt;li&gt;Example: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;net user Administrator &quot;IAmTheGreatestAdminEver12@&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once that is done, you should be able to login to the account using that password.&lt;/p&gt;
+
+&lt;h1 id=&quot;step-5---clean-up&quot;&gt;Step 5 - Clean-up&lt;/h1&gt;
+&lt;p&gt;One last thing you need to do is clean up the file changes you made. You &lt;em&gt;may&lt;/em&gt; have to boot back into the install disk to do this.&lt;/p&gt;
+
+&lt;p&gt;At the command prompt, simply reverse what file changes you made earlier.&lt;/p&gt;
+
+&lt;p&gt;Type:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd C:\Windows\System32&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;move Utilman.exe cmd.exe&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;move Utilman.exe.bak Utilman.exe&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once that is done, you can boot back into your PC and use it normally.&lt;/p&gt;
+
+&lt;p&gt;Hope this helps you, but in all likelihood, I’ll be the only one using this for reference when I have to do this again.&lt;/p&gt;</content><author><name></name></author><summary type="html">I recently was tasked with recovering access to a colleague’s desktop PC. I understood this was possible through the widely known Windows 10 recovery exploit.</summary></entry><entry><title type="html">Finding W10 Key W Linux</title><link href="http://localhost:4000/2022/02/01/Finding-W10-Key-w-Linux.html" rel="alternate" type="text/html" title="Finding W10 Key W Linux" /><published>2022-02-01T00:00:00-06:00</published><updated>2022-02-01T00:00:00-06:00</updated><id>http://localhost:4000/2022/02/01/Finding-W10-Key-w-Linux</id><content type="html" xml:base="http://localhost:4000/2022/02/01/Finding-W10-Key-w-Linux.html">&lt;!-- &lt;img src=&apos;../../docs/images/Screenshot_2022-02-01_094936.png&apos;&gt; --&gt;
+
+&lt;p&gt;&lt;img src=&quot;/docs/assets/images/Screenshot_2022-02-01_094936.png&quot; alt=&quot;Image&quot; /&gt;
+&lt;a href=&quot;https://www.cyberciti.biz/faq/linux-find-windows-10-oem-product-key-command/&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">My Journey Into Virtualbox</title><link href="http://localhost:4000/blog/linux/2021/11/23/My-Journey-Into-Virtualbox.html" rel="alternate" type="text/html" title="My Journey Into Virtualbox" /><published>2021-11-23T00:00:00-06:00</published><updated>2021-11-23T00:00:00-06:00</updated><id>http://localhost:4000/blog/linux/2021/11/23/My-Journey-Into-Virtualbox</id><content type="html" xml:base="http://localhost:4000/blog/linux/2021/11/23/My-Journey-Into-Virtualbox.html">&lt;p&gt;I recently decided to switch over to using Linux as my daily driver. However, several of our enterprise apps simply don’t work on Linux, and I’d rather not faff about trying to use Wine. To that end, I decided VirtualBox would be the best option over VMware Workstation, mostly because it’s free.&lt;/p&gt;
+
+&lt;p&gt;I go in and set the VM up, everything is fairly straightforward. As I come to start getting ready to install apps and login to sites for downloads, I find the copy/paste between guest and host doesn’t work. Simple enough, I go through the menus and enable bidirectional, restart the VM, and… nothing.&lt;/p&gt;
+
+&lt;p&gt;Turns out, I have to download the Oracle equivalent of VMware Tools. Sounds simple enough, however basically no one online has a simple enough description that works for my use case.&lt;/p&gt;
+
+&lt;p&gt;It seems most people who are experiencing this problem either run Ubuntu or are smarter than me and can figure it out easily.&lt;/p&gt;
+
+&lt;p&gt;The version of VirtualBox that installs to Kali, for whatever reason, seems to lack the simple “devices -&amp;gt; CD -&amp;gt; Guest Additionas” menu option entirely.&lt;/p&gt;
+
+&lt;p&gt;After several attempts, multiple VM crashes, and a few reboots, I found the solution that fit my scenario.&lt;/p&gt;
+
+&lt;p&gt;First: perform the following commands in your terminal of choice:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt-get upgrade -y&lt;/code&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt-get install virtualbox-guest-additions-iso -y&lt;/code&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt-get install virtualbox-guest-utils -y&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Restart your virtual machine, if it’s powered on.&lt;/p&gt;
+
+&lt;p&gt;Second: ensure you have an available virtual CD drive. This can be the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Controller: SATA&lt;/code&gt; or something else, but it needs to have the CD option and be set to empty.
+This can be done by first powering off your VM, selecting your VM, going to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;options -&amp;gt; storage&lt;/code&gt; and either add an optical drive, or just clear the ISO image from the one that presumable came configured OOB.&lt;/p&gt;
+
+&lt;p&gt;Once that is done, You can select the CD icon and click “Choose a disk file…”, the VBoxGuestAdditions.iso is located at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/share/virtualbox/VBoxGuestAdditions.iso&lt;/code&gt; (At least it was on my version).&lt;/p&gt;
+
+&lt;p&gt;Power on your VM, if it isn’t already, and Windows should immediately detect the CD, prompting you to run the guest additions installer. Once that is done, restart one last time and copy/paste is yours.&lt;/p&gt;
+
+&lt;p&gt;It seems to me that this should work and be applicable to any Linux-based VirtualBox install, but I’m far from an expert on the subject.
+Ultimately, I can now copy/paste between systems. I hope it was worth it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;&quot; src=&quot;https://askubuntu.com/a/681829&quot;&gt;Stack overflow solution&lt;/a&gt;
+&lt;a href=&quot;&quot; src=&quot;https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/settings-storage.html&quot;&gt;Oracle Storage Document&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="linux" /><summary type="html">I recently decided to switch over to using Linux as my daily driver. However, several of our enterprise apps simply don’t work on Linux, and I’d rather not faff about trying to use Wine. To that end, I decided VirtualBox would be the best option over VMware Workstation, mostly because it’s free.</summary></entry><entry><title type="html">Initial Post</title><link href="http://localhost:4000/test/blog/2021/11/17/Initial-Post.html" rel="alternate" type="text/html" title="Initial Post" /><published>2021-11-17T00:00:00-06:00</published><updated>2021-11-17T00:00:00-06:00</updated><id>http://localhost:4000/test/blog/2021/11/17/Initial-Post</id><content type="html" xml:base="http://localhost:4000/test/blog/2021/11/17/Initial-Post.html">&lt;h1 id=&quot;this-is-an-initial-test-post-please-pretend-i-have-the-slightest-clue-as-to-what-im-doing&quot;&gt;This is an initial test post. Please pretend I have the slightest clue as to what I’m doing.&lt;/h1&gt;
+
+&lt;p&gt;&lt;b&gt;this text might be bold&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;This text might be italicized&lt;/i&gt;&lt;/p&gt;
+
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: blue; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;background-color: red; height: 20px; width: 20px;&quot;&gt;&lt;/div&gt;</content><author><name></name></author><category term="test" /><category term="blog" /><summary type="html">This is an initial test post. Please pretend I have the slightest clue as to what I’m doing.</summary></entry></feed>
