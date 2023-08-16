@@ -16,6 +16,8 @@ img {
 
 I am a security analyst and systems administrator who primarily focuses on user education and vulnerability assessment.
 
+I am currently working on CISA certification.
+
 My background is in analysis and threat detection/remediation.
 
 I have a bachelor's in Cyber Security from Oklahoma State University, and am currently studying for CISA certification.
