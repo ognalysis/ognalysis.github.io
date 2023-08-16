@@ -5,9 +5,9 @@
 #  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
 #  "minima/initialize";
 
-body {
-  background-color: red !important;
-}
+#body {
+#  background-color: red !important;
+#}
 
 .page-content {
   background-image: url('/docs/assets/images/org_photo_6553793_1665863092000.jpg');
