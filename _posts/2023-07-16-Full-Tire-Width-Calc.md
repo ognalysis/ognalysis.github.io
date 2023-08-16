@@ -5,7 +5,7 @@
 </style>
 
 <div>
-<label>Tire Size</label>
+<label name="TireS">Tire Size</label>
 <input type="number" id="TireW"></input> <text>/</text>
 <input type="number" id="SWP"></input><text>R</text>
 <input type="number" id="wheelsize"></input> <text>e.g. 235/35R18</text>
