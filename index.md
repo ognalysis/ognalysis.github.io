@@ -1,5 +1,5 @@
 layout: page
 title: Main Page
-permalink: /main
+permalink: /home
 
 This is content
