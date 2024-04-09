@@ -1,7 +1,5 @@
----
 layout: page
-title: Main Page
+title: "Main Page"
 permalink: /home
----
 
-This is content
+This is content for the main page
