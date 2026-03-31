@@ -1,6 +1,5 @@
 ---
-title: Ognalysis
-subtitle: Woodworking
+title: Woodworking
 layout: default
 ---
 
