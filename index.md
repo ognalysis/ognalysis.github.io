@@ -2,4 +2,4 @@
 layout: default
 ---
 
-<a href="/posts/markdown_guide/">Markdown Guide</a>
+<a href="/posts/markdown_guide.html">Markdown Guide</a>
