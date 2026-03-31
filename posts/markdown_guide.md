@@ -1,5 +1,4 @@
 ---
-permalink:/posts/markdown_guide.md
 layout: default
 ---
 
