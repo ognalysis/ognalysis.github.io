@@ -1,6 +1,5 @@
 ---
-title: Ognalysis
-subtitle: IT stuff
+title: IT Stuff
 layout: default
 ---
 
