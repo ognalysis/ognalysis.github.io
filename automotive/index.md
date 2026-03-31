@@ -1,6 +1,5 @@
 ---
-title: Ognalysis
-subtitle: automotive
+title: Automotive
 layout: default
 ---
 
