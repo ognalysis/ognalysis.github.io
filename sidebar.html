@@ -1,0 +1,45 @@
+{% assign guides = site.guides | sort: 'title' %}
+{% assign categories = guides | map: 'category' | uniq | sort %}
+
+<nav class="sidebar-nav">
+  <a href="{{ '/' | relative_url }}" class="sidebar-home">&#8592; Home</a>
+
+  {% if categories.size > 0 %}
+    {% for category in categories %}
+      {% if category %}
+        <div class="sidebar-group">
+          <span class="sidebar-group-label">{{ category }}</span>
+          {% for guide in guides %}
+            {% if guide.category == category %}
+              <a href="{{ guide.url | relative_url }}"
+                 class="sidebar-link {% if page.url == guide.url %}active{% endif %}">
+                {{ guide.title }}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    {% comment %} Uncategorized guides {% endcomment %}
+    {% assign uncategorized = guides | where_exp: "g", "g.category == nil or g.category == ''" %}
+    {% if uncategorized.size > 0 %}
+      <div class="sidebar-group">
+        <span class="sidebar-group-label">Other</span>
+        {% for guide in uncategorized %}
+          <a href="{{ guide.url | relative_url }}"
+             class="sidebar-link {% if page.url == guide.url %}active{% endif %}">
+            {{ guide.title }}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% else %}
+    {% for guide in guides %}
+      <a href="{{ guide.url | relative_url }}"
+         class="sidebar-link {% if page.url == guide.url %}active{% endif %}">
+        {{ guide.title }}
+      </a>
+    {% endfor %}
+  {% endif %}
+</nav>
