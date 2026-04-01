@@ -4,4 +4,4 @@ layout: default
 description: A page about cars
 ---
 
-[Mustang](./IMG_20250208_130306611~2.jpg)
+![Mustang](./IMG_20250208_1303066112.jpg)
