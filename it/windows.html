@@ -3,6 +3,18 @@ layout: default
 title: IT Stuff
 description: Windows Tips & Tricks
 ---
+<body>
+  <div>
+    <h2>Scripts</h2>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      var url = 'https://raw.githubusercontent.com/ognalysis/Scriptlets/refs/heads/main/Find-Files-with-non-ascii-chars.ps1';
 
-# Scripts
+      $.get(url, function(data) { 
+        $('#code').text(data);
+      }, 'text');
+    });
+</script>    
+  </div>  
+</body>
 [Find files with non-ascii characters](https://raw.githubusercontent.com/ognalysis/Scriptlets/refs/heads/main/Find-Files-with-non-ascii-chars.ps1)
