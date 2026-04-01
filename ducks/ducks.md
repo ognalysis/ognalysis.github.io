@@ -11,4 +11,4 @@ layout: default
 
 ![Duck 4](/ducks/4.png)
 
-![Duck 5](/ducks/5.png)
+![Duck 5](/ducks/5.jpg)
