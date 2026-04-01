@@ -1,9 +1,8 @@
 ---
 title: IT Stuff
 layout: default
+description: A page about IT stuff
 ---
-
-A page about IT stuff.
 
 # Guides
 [Markdown Guide](/it/markdown_guide.html)
