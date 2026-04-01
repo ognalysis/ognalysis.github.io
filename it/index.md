@@ -5,6 +5,8 @@ description: A page about IT stuff
 ---
 
 # Guides
+[Windows Tricks](/it/windows.html)
+[Linux Tricks](/it/linux.html)
 [Markdown Guide](/it/markdown_guide.html)
 
 # Useful Links
