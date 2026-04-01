@@ -3,12 +3,12 @@ title: ducks
 layout: default
 ---
 
-<a href="/ducks/1.png"></a>
+![Duck 1](/ducks/1.png)
 
-<a href="/ducks/2.png"></a>
+![Duck 2](/ducks/2.png)
 
-<a href="/ducks/3.png"></a>
+![Duck 3](/ducks/3.png)
 
-<a href="/ducks/4.png"></a>
+![Duck 4](/ducks/4.png)
 
-<a href="/ducks/5.png"></a>
+![Duck 5](/ducks/5.png)
