@@ -4,17 +4,20 @@ title: IT Stuff
 description: Windows Tips & Tricks
 ---
 <body>
-  <div>
-    <h2>Scripts</h2>
-    <script type="text/javascript">
-      $(document).ready(function() {
-      var url = 'https://raw.githubusercontent.com/ognalysis/Scriptlets/refs/heads/main/Find-Files-with-non-ascii-chars.ps1';
+   <div id="file-content">Loading file...</div>
 
-      $.get(url, function(data) { 
-        $('#code').text(data);
-      }, 'text');
-    });
-</script>    
-  </div>  
+   <script>
+       fetch('https://raw.githubusercontent.com/ognalysis/Scriptlets/refs/heads/main/Find-Files-with-non-ascii-chars.ps1')
+           .then(response => {
+               console.log(response)
+               return response.text() //this gonna extract the content of the file
+           })
+           .then(data => {
+               document.getElementById('file-content').textContent = data;
+           })
+           .catch(error => {
+               document.getElementById('file-content').textContent = `Error loading file: ${error}`;
+           });
+   </script>
 </body>
 [Find files with non-ascii characters](https://raw.githubusercontent.com/ognalysis/Scriptlets/refs/heads/main/Find-Files-with-non-ascii-chars.ps1)
