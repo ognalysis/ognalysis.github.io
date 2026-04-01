@@ -9,6 +9,7 @@ A page about IT stuff.
 [Markdown Guide](/it/markdown_guide.html)
 
 # Useful Links
+[Links](/it/useful-links.html)
 ## Tools
 [VirusTotal](https://www.virustotal.com/)
 ## Blogs, Vlogs, and Atogs
