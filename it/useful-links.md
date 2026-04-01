@@ -1,5 +1,5 @@
 ---
 title: IT Stuff
-subtitle: Useful links
+description: Useful links
 layout: default
 ---
